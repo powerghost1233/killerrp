@@ -5,21 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>KILLER RP — El Diablo del Gueto</title>
-<meta name="description" content="KILLER RP. Cantante, DJ y superviviente de Valencia. Nacido en Valencia. Forjado en el barrio. Fiel al flow.">
+
+<meta name="description"
+content="KILLER RP. Cantante, DJ y superviviente de Valencia. Nacido en Valencia. Forjado en el barrio. Fiel al flow.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
 /* =========================================================
-   KILLER RP
+   KILLER RP — OFFICIAL WEBSITE
    BLACK / GOLD / HELL RED
 ========================================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 :root{
     --black:#030303;
     --black2:#080808;
-    --black3:#111;
+    --black3:#111111;
     --gold:#d4af37;
     --gold-light:#ffd86a;
     --gold-dark:#74540c;
@@ -52,24 +57,21 @@ body::before{
     inset:0;
     pointer-events:none;
     z-index:9999;
-    opacity:.045;
+    opacity:.035;
+
     background-image:
-      repeating-radial-gradient(
+    repeating-radial-gradient(
         circle at 20% 20%,
         #fff 0,
         #fff 1px,
         transparent 1px,
-        transparent 4px
-      );
+        transparent 5px
+    );
 }
 
 a{
     text-decoration:none;
     color:inherit;
-}
-
-img{
-    max-width:100%;
 }
 
 ::selection{
@@ -90,101 +92,166 @@ img{
 }
 
 ::-webkit-scrollbar-thumb{
-    background:linear-gradient(var(--gold),var(--red));
+    background:
+    linear-gradient(
+        var(--gold),
+        var(--red)
+    );
 }
 
 /* =========================================================
-   INTRO
+   INTRO KILLER RP
 ========================================================= */
 
 #intro{
     position:fixed;
     inset:0;
     background:#000;
+
     z-index:10000;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    animation:introOut .8s ease 2.2s forwards;
+
+    animation:
+    introOut .8s ease 2.2s forwards;
 }
 
 .intro-content{
     text-align:center;
-    animation:introScale 2s ease;
+
+    animation:
+    introScale 2s ease;
 }
 
 .intro-killer{
     font-family:'Bebas Neue',sans-serif;
-    font-size:clamp(5rem,15vw,13rem);
+
+    font-size:
+    clamp(5rem,15vw,13rem);
+
     letter-spacing:8px;
     line-height:.75;
+
     color:var(--gold);
+
     text-shadow:
-      0 0 15px rgba(212,175,55,.5),
-      0 0 60px rgba(212,175,55,.2);
+    0 0 15px rgba(212,175,55,.5),
+    0 0 60px rgba(212,175,55,.2);
 }
 
 .intro-rp{
     font-family:'Bebas Neue',sans-serif;
-    font-size:clamp(2rem,6vw,5rem);
+
+    font-size:
+    clamp(2rem,6vw,5rem);
+
     letter-spacing:25px;
+
     color:#eee;
+
     margin-left:25px;
 }
 
 .intro-line{
     width:0;
     height:2px;
+
     margin:25px auto;
-    background:linear-gradient(90deg,transparent,var(--gold),transparent);
-    animation:lineGrow 1.5s ease .3s forwards;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+    );
+
+    animation:
+    lineGrow 1.5s ease .3s forwards;
 }
 
 @keyframes introScale{
-    0%{opacity:0;transform:scale(.8);filter:blur(10px);}
-    30%{opacity:1;transform:scale(1);}
-    80%{opacity:1;}
-    100%{transform:scale(1.08);}
+
+    0%{
+        opacity:0;
+        transform:scale(.8);
+        filter:blur(10px);
+    }
+
+    30%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+    80%{
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(1.08);
+    }
 }
 
 @keyframes lineGrow{
-    to{width:300px;}
+
+    to{
+        width:300px;
+    }
 }
 
 @keyframes introOut{
+
     to{
         opacity:0;
         visibility:hidden;
+        pointer-events:none;
     }
 }
 
 /* =========================================================
-   NAV
+   NAVIGATION
 ========================================================= */
 
 nav{
     position:fixed;
+
     top:0;
     left:0;
+
     width:100%;
+
     z-index:1000;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:22px 6%;
+
     transition:.4s;
 }
 
 nav.scrolled{
+
     padding:14px 6%;
-    background:rgba(0,0,0,.9);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(212,175,55,.2);
+
+    background:
+    rgba(0,0,0,.90);
+
+    backdrop-filter:
+    blur(14px);
+
+    border-bottom:
+    1px solid rgba(212,175,55,.2);
 }
 
 .logo{
     font-family:'Bebas Neue',sans-serif;
+
     font-size:2rem;
+
     letter-spacing:3px;
 }
 
@@ -195,26 +262,38 @@ nav.scrolled{
 .nav-links{
     display:flex;
     gap:30px;
+
     list-style:none;
 }
 
 .nav-links a{
     font-size:.72rem;
+
     font-weight:700;
+
     letter-spacing:2px;
+
     text-transform:uppercase;
+
     transition:.3s;
+
     position:relative;
 }
 
 .nav-links a::after{
+
     content:"";
+
     position:absolute;
+
     left:0;
     bottom:-8px;
+
     width:0;
     height:1px;
+
     background:var(--gold);
+
     transition:.3s;
 }
 
@@ -231,49 +310,95 @@ nav.scrolled{
 ========================================================= */
 
 .hero{
+
     min-height:100vh;
+
     position:relative;
+
     display:flex;
     align-items:center;
+
     overflow:hidden;
 }
 
 .hero-bg{
+
     position:absolute;
+
     inset:0;
+
     background:
-        linear-gradient(90deg,#000 5%,rgba(0,0,0,.78) 40%,rgba(0,0,0,.15) 75%),
-        linear-gradient(0deg,#030303 0%,transparent 30%),
-        url('assets/killer-rp-photo.jpg.png') center 25% / cover no-repeat;
+
+    linear-gradient(
+        90deg,
+        #000 5%,
+        rgba(0,0,0,.78) 40%,
+        rgba(0,0,0,.15) 75%
+    ),
+
+    linear-gradient(
+        0deg,
+        #030303 0%,
+        transparent 30%
+    ),
+
+    url('assets/killer-rp-photo.jpg.png')
+    center 25% / cover no-repeat;
+
     transform:scale(1.03);
-    animation:heroZoom 12s ease forwards;
+
+    animation:
+    heroZoom 12s ease forwards;
 }
 
 @keyframes heroZoom{
-    to{transform:scale(1);}
+
+    to{
+        transform:scale(1);
+    }
 }
 
 .hero::after{
+
     content:"";
+
     position:absolute;
+
     inset:0;
+
     background:
-       radial-gradient(circle at 70% 45%,transparent 0%,rgba(0,0,0,.05) 25%,#000 100%);
+    radial-gradient(
+        circle at 70% 45%,
+        transparent 0%,
+        rgba(0,0,0,.05) 25%,
+        #000 100%
+    );
 }
 
 .red-glow{
+
     position:absolute;
+
     width:500px;
     height:500px;
+
     border-radius:50%;
-    background:rgba(160,0,0,.16);
-    filter:blur(130px);
+
+    background:
+    rgba(160,0,0,.16);
+
+    filter:
+    blur(130px);
+
     right:15%;
     bottom:5%;
-    animation:pulseRed 4s infinite alternate;
+
+    animation:
+    pulseRed 4s infinite alternate;
 }
 
 @keyframes pulseRed{
+
     to{
         opacity:.4;
         transform:scale(1.2);
@@ -281,49 +406,78 @@ nav.scrolled{
 }
 
 .hero-content{
+
     position:relative;
+
     z-index:5;
+
     width:88%;
+
     margin:auto;
+
     padding-top:80px;
 }
 
 .eyebrow{
+
     color:var(--gold);
+
     letter-spacing:6px;
+
     font-size:.75rem;
+
     font-weight:700;
+
     margin-bottom:20px;
 }
 
 .hero h1{
+
     font-family:'Bebas Neue',sans-serif;
-    font-size:clamp(6rem,15vw,13rem);
+
+    font-size:
+    clamp(6rem,15vw,13rem);
+
     line-height:.72;
+
     letter-spacing:3px;
+
     max-width:900px;
 }
 
 .hero h1 .killer{
+
     display:block;
+
     color:var(--gold);
+
     text-shadow:
-       2px 2px 0 #5f4305,
-       0 0 35px rgba(212,175,55,.25);
+    2px 2px 0 #5f4305,
+    0 0 35px rgba(212,175,55,.25);
 }
 
 .hero h1 .rp{
+
     display:block;
+
     color:#fff;
+
     margin-left:3px;
 }
 
 .hero-sub{
+
     margin-top:35px;
+
     max-width:650px;
-    font-size:clamp(1rem,2vw,1.3rem);
+
+    font-size:
+    clamp(1rem,2vw,1.3rem);
+
     letter-spacing:2px;
+
     line-height:1.8;
+
     color:#ccc;
 }
 
@@ -332,47 +486,82 @@ nav.scrolled{
 }
 
 .hero-buttons{
+
     display:flex;
+
     gap:15px;
+
     margin-top:35px;
+
     flex-wrap:wrap;
 }
 
 .btn{
+
     padding:16px 28px;
+
     text-transform:uppercase;
+
     letter-spacing:2px;
+
     font-size:.72rem;
+
     font-weight:800;
-    border:1px solid var(--gold);
+
+    border:
+    1px solid var(--gold);
+
     transition:.35s;
+
     cursor:pointer;
 }
 
 .btn-gold{
-    background:var(--gold);
+
+    background:
+    var(--gold);
+
     color:#000;
 }
 
 .btn-gold:hover{
-    background:var(--gold-light);
-    box-shadow:0 0 35px rgba(212,175,55,.3);
+
+    background:
+    var(--gold-light);
+
+    box-shadow:
+    0 0 35px rgba(212,175,55,.3);
+
+    transform:
+    translateY(-2px);
 }
 
 .btn-dark:hover{
-    background:var(--gold);
+
+    background:
+    var(--gold);
+
     color:#000;
 }
 
 .scroll-down{
+
     position:absolute;
+
     z-index:5;
+
     bottom:30px;
+
     left:6%;
+
     font-size:.65rem;
+
     letter-spacing:4px;
+
     color:#777;
-    writing-mode:vertical-rl;
+
+    writing-mode:
+    vertical-rl;
 }
 
 /* =========================================================
@@ -380,25 +569,42 @@ nav.scrolled{
 ========================================================= */
 
 .marquee{
+
     overflow:hidden;
+
     padding:17px 0;
-    border-top:1px solid #222;
-    border-bottom:1px solid #222;
+
+    border-top:
+    1px solid #222;
+
+    border-bottom:
+    1px solid #222;
+
     background:#070707;
 }
 
 .marquee-inner{
+
     display:flex;
+
     width:max-content;
-    animation:marquee 25s linear infinite;
+
+    animation:
+    marquee 25s linear infinite;
 }
 
 .marquee span{
+
     font-family:'Bebas Neue';
+
     font-size:1.3rem;
+
     letter-spacing:5px;
+
     white-space:nowrap;
+
     padding-right:45px;
+
     color:#777;
 }
 
@@ -407,31 +613,51 @@ nav.scrolled{
 }
 
 @keyframes marquee{
-    to{transform:translateX(-50%);}
+
+    to{
+        transform:
+        translateX(-50%);
+    }
 }
 
 /* =========================================================
-   GENERAL SECTIONS
+   GENERAL
 ========================================================= */
 
 section{
+
     position:relative;
-    padding:120px 7%;
+
+    padding:
+    120px 7%;
 }
 
 .section-tag{
-    color:var(--red-bright);
+
+    color:
+    var(--red-bright);
+
     font-size:.7rem;
+
     font-weight:800;
+
     letter-spacing:5px;
+
     text-transform:uppercase;
+
     margin-bottom:15px;
 }
 
 .section-title{
-    font-family:'Bebas Neue';
-    font-size:clamp(4rem,9vw,8rem);
+
+    font-family:
+    'Bebas Neue';
+
+    font-size:
+    clamp(4rem,9vw,8rem);
+
     line-height:.85;
+
     letter-spacing:2px;
 }
 
@@ -440,36 +666,63 @@ section{
 }
 
 .section-line{
+
     width:80px;
+
     height:2px;
-    background:var(--gold);
-    margin:30px 0;
+
+    background:
+    var(--gold);
+
+    margin:
+    30px 0;
 }
 
 /* =========================================================
-   MANIFESTO
+   EL KILLER
 ========================================================= */
 
 .manifesto{
+
     min-height:90vh;
+
     display:flex;
+
     align-items:center;
+
     background:
-      radial-gradient(circle at 80% 50%,rgba(130,0,0,.1),transparent 35%),
-      #030303;
+
+    radial-gradient(
+        circle at 80% 50%,
+        rgba(130,0,0,.1),
+        transparent 35%
+    ),
+
+    #030303;
 }
 
 .manifesto-grid{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+    1fr 1fr;
+
     gap:80px;
+
     align-items:center;
+
     width:100%;
 }
 
 .big-quote{
-    font-family:'Bebas Neue';
-    font-size:clamp(3rem,7vw,7rem);
+
+    font-family:
+    'Bebas Neue';
+
+    font-size:
+    clamp(3rem,7vw,7rem);
+
     line-height:.9;
 }
 
@@ -478,9 +731,13 @@ section{
 }
 
 .manifesto-text{
+
     color:#aaa;
+
     font-size:1rem;
+
     line-height:2;
+
     max-width:550px;
 }
 
@@ -493,49 +750,87 @@ section{
 ========================================================= */
 
 .valencia{
+
     background:
-      linear-gradient(rgba(0,0,0,.83),rgba(0,0,0,.9)),
-      radial-gradient(circle at center,var(--red),#000 60%);
+
+    linear-gradient(
+        rgba(0,0,0,.83),
+        rgba(0,0,0,.9)
+    ),
+
+    radial-gradient(
+        circle at center,
+        var(--red),
+        #000 60%
+    );
+
     text-align:center;
+
     overflow:hidden;
 }
 
 .valencia::before{
+
     content:"VALENCIA";
+
     position:absolute;
-    font-family:'Bebas Neue';
+
+    font-family:
+    'Bebas Neue';
+
     font-size:25vw;
-    color:rgba(255,255,255,.018);
+
+    color:
+    rgba(255,255,255,.018);
+
     left:50%;
     top:50%;
-    transform:translate(-50%,-50%);
+
+    transform:
+    translate(-50%,-50%);
+
     white-space:nowrap;
 }
 
 .valencia-content{
+
     position:relative;
+
     z-index:2;
+
     max-width:950px;
+
     margin:auto;
 }
 
 .valencia p{
+
     max-width:700px;
-    margin:35px auto 0;
+
+    margin:
+    35px auto 0;
+
     line-height:2;
+
     color:#aaa;
 }
 
 .coordinates{
+
     margin-top:50px;
+
     color:var(--gold);
-    font-family:'Bebas Neue';
+
+    font-family:
+    'Bebas Neue';
+
     letter-spacing:7px;
+
     font-size:1.2rem;
 }
 
 /* =========================================================
-   SOUND / MUSIC
+   SOUND
 ========================================================= */
 
 .sound{
@@ -543,97 +838,334 @@ section{
 }
 
 .sound-grid{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+    repeat(3,1fr);
+
     gap:2px;
+
     margin-top:70px;
 }
 
 .sound-card{
+
     min-height:420px;
+
     padding:45px;
-    border:1px solid #181818;
+
+    border:
+    1px solid #181818;
+
     background:#090909;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:flex-end;
+
     position:relative;
+
     overflow:hidden;
+
     transition:.4s;
 }
 
 .sound-card::before{
+
     content:"";
+
     position:absolute;
+
     inset:0;
-    background:linear-gradient(145deg,transparent 50%,rgba(212,175,55,.08));
+
+    background:
+    linear-gradient(
+        145deg,
+        transparent 50%,
+        rgba(212,175,55,.08)
+    );
 }
 
 .sound-card:hover{
-    transform:translateY(-8px);
-    border-color:var(--gold-dark);
+
+    transform:
+    translateY(-8px);
+
+    border-color:
+    var(--gold-dark);
 }
 
 .sound-number{
+
     position:absolute;
+
     top:25px;
     right:30px;
-    font-family:'Bebas Neue';
+
+    font-family:
+    'Bebas Neue';
+
     font-size:6rem;
+
     color:#111;
 }
 
 .sound-icon{
+
     color:var(--gold);
+
     font-size:2rem;
+
     margin-bottom:20px;
 }
 
 .sound-card h3{
-    font-family:'Bebas Neue';
+
+    font-family:
+    'Bebas Neue';
+
     font-size:3rem;
+
     letter-spacing:2px;
 }
 
 .sound-card p{
+
     color:#777;
+
     line-height:1.7;
+
     margin-top:10px;
 }
 
 /* =========================================================
-   VIDEO
+   YOUTUBE VIDEO MODE
 ========================================================= */
 
 .video-section{
-    background:#030303;
+
+    background:
+
+    radial-gradient(
+        circle at 70% 50%,
+        rgba(212,175,55,.05),
+        transparent 40%
+    ),
+
+    #030303;
+}
+
+.video-heading{
+
+    display:flex;
+
+    justify-content:
+    space-between;
+
+    align-items:flex-end;
+
+    gap:40px;
+}
+
+.video-description{
+
+    max-width:400px;
+
+    color:#777;
+
+    line-height:1.8;
+
+    font-size:.9rem;
 }
 
 .video-main{
+
     margin-top:60px;
+
     position:relative;
-    border:1px solid #222;
+
+    border:
+    1px solid #292929;
+
     background:#000;
-    box-shadow:0 30px 100px rgba(0,0,0,.8);
+
+    box-shadow:
+    0 30px 100px rgba(0,0,0,.8);
+
+    transition:.4s;
 }
 
-.video-main video{
-    width:100%;
-    display:block;
-    max-height:75vh;
-    object-fit:cover;
+.video-main:hover{
+
+    border-color:
+    rgba(212,175,55,.6);
+
+    box-shadow:
+    0 30px 100px rgba(212,175,55,.07);
+}
+
+.video-topbar{
+
+    min-height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:
+    space-between;
+
+    padding:
+    0 22px;
+
+    border-bottom:
+    1px solid #222;
+
+    background:#080808;
 }
 
 .video-label{
-    position:absolute;
-    top:20px;
-    left:20px;
-    padding:10px 15px;
-    background:rgba(0,0,0,.75);
-    border-left:2px solid var(--gold);
+
     letter-spacing:3px;
+
     font-size:.65rem;
+
     font-weight:800;
+
+    color:#ddd;
+}
+
+.video-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#666;
+
+    font-size:.6rem;
+
+    letter-spacing:2px;
+}
+
+.live-dot{
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:
+    var(--red-bright);
+
+    box-shadow:
+    0 0 12px var(--red);
+
+    animation:
+    dotPulse 1.5s infinite alternate;
+}
+
+@keyframes dotPulse{
+
+    to{
+        opacity:.35;
+    }
+}
+
+/* RESPONSIVE YOUTUBE */
+
+.youtube-player{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:16 / 9;
+
+    overflow:hidden;
+
+    background:#000;
+}
+
+.youtube-player iframe{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    border:0;
+}
+
+.youtube-info{
+
+    padding:
+    28px 25px;
+
+    display:flex;
+
+    justify-content:
+    space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    background:#080808;
+}
+
+.youtube-info h3{
+
+    font-family:
+    'Bebas Neue';
+
+    font-size:2rem;
+
+    letter-spacing:2px;
+}
+
+.youtube-info p{
+
+    margin-top:5px;
+
+    color:#666;
+
+    font-size:.75rem;
+
+    letter-spacing:2px;
+}
+
+.youtube-link{
+
+    color:var(--gold);
+
+    border:
+    1px solid #332b16;
+
+    padding:
+    12px 18px;
+
+    font-size:.65rem;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+}
+
+.youtube-link:hover{
+
+    background:
+    var(--gold);
+
+    color:#000;
 }
 
 /* =========================================================
@@ -641,12 +1173,26 @@ section{
 ========================================================= */
 
 .dj{
+
     min-height:80vh;
+
     display:flex;
+
     align-items:center;
+
     background:
-      linear-gradient(90deg,#020202 30%,rgba(0,0,0,.65)),
-      radial-gradient(circle at 75% 50%,rgba(212,175,55,.13),transparent 30%);
+
+    linear-gradient(
+        90deg,
+        #020202 30%,
+        rgba(0,0,0,.65)
+    ),
+
+    radial-gradient(
+        circle at 75% 50%,
+        rgba(212,175,55,.13),
+        transparent 30%
+    );
 }
 
 .dj-content{
@@ -654,83 +1200,172 @@ section{
 }
 
 .dj-copy{
+
     margin-top:30px;
+
     color:#999;
+
     line-height:2;
+
     max-width:600px;
 }
 
 .equalizer{
+
     display:flex;
+
     align-items:flex-end;
+
     gap:5px;
+
     height:70px;
+
     margin-top:40px;
 }
 
 .bar{
+
     width:7px;
-    background:linear-gradient(var(--gold-light),var(--gold),var(--red));
-    animation:eq .8s infinite alternate ease-in-out;
+
+    background:
+    linear-gradient(
+        var(--gold-light),
+        var(--gold),
+        var(--red)
+    );
+
+    animation:
+    eq .8s infinite alternate ease-in-out;
 }
 
-.bar:nth-child(1){height:25px;animation-delay:.1s}
-.bar:nth-child(2){height:55px;animation-delay:.4s}
-.bar:nth-child(3){height:35px;animation-delay:.2s}
-.bar:nth-child(4){height:65px;animation-delay:.5s}
-.bar:nth-child(5){height:45px;animation-delay:.15s}
-.bar:nth-child(6){height:60px;animation-delay:.35s}
-.bar:nth-child(7){height:30px;animation-delay:.55s}
-.bar:nth-child(8){height:50px;animation-delay:.25s}
+.bar:nth-child(1){
+    height:25px;
+    animation-delay:.1s;
+}
+
+.bar:nth-child(2){
+    height:55px;
+    animation-delay:.4s;
+}
+
+.bar:nth-child(3){
+    height:35px;
+    animation-delay:.2s;
+}
+
+.bar:nth-child(4){
+    height:65px;
+    animation-delay:.5s;
+}
+
+.bar:nth-child(5){
+    height:45px;
+    animation-delay:.15s;
+}
+
+.bar:nth-child(6){
+    height:60px;
+    animation-delay:.35s;
+}
+
+.bar:nth-child(7){
+    height:30px;
+    animation-delay:.55s;
+}
+
+.bar:nth-child(8){
+    height:50px;
+    animation-delay:.25s;
+}
 
 @keyframes eq{
-    to{height:12px;}
+
+    to{
+        height:12px;
+    }
 }
 
 /* =========================================================
-   DIABLO
+   DIABLO DEL GUETO
 ========================================================= */
 
 .diablo{
+
     min-height:90vh;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     text-align:center;
+
     overflow:hidden;
+
     background:
-       radial-gradient(circle at 50% 100%,rgba(180,0,0,.35),transparent 40%),
-       #020202;
+
+    radial-gradient(
+        circle at 50% 100%,
+        rgba(180,0,0,.35),
+        transparent 40%
+    ),
+
+    #020202;
 }
 
 .diablo::after{
+
     content:"";
+
     position:absolute;
+
     bottom:-150px;
+
     width:800px;
+
     height:350px;
-    background:var(--red);
+
+    background:
+    var(--red);
+
     opacity:.12;
-    filter:blur(130px);
+
+    filter:
+    blur(130px);
 }
 
 .diablo-content{
+
     position:relative;
+
     z-index:3;
 }
 
 .diablo-small{
+
     letter-spacing:10px;
-    color:var(--red-bright);
+
+    color:
+    var(--red-bright);
+
     font-weight:800;
+
     font-size:.7rem;
 }
 
 .diablo h2{
-    font-family:'Bebas Neue';
-    font-size:clamp(5rem,13vw,12rem);
+
+    font-family:
+    'Bebas Neue';
+
+    font-size:
+    clamp(5rem,13vw,12rem);
+
     line-height:.78;
-    margin:25px 0;
+
+    margin:
+    25px 0;
 }
 
 .diablo h2 span{
@@ -738,42 +1373,71 @@ section{
 }
 
 .diablo p{
+
     max-width:650px;
+
     margin:auto;
+
     color:#999;
+
     line-height:2;
 }
 
 /* =========================================================
-   GOLD
+   KILLER GOLD
 ========================================================= */
 
 .gold-section{
+
     background:
-      linear-gradient(135deg,#070604,#000 60%);
+
+    linear-gradient(
+        135deg,
+        #070604,
+        #000 60%
+    );
 }
 
 .gold-box{
-    border:1px solid var(--gold-dark);
-    padding:80px 6%;
+
+    border:
+    1px solid var(--gold-dark);
+
+    padding:
+    80px 6%;
+
     position:relative;
+
     overflow:hidden;
 }
 
 .gold-box::before{
+
     content:"GOLD";
+
     position:absolute;
+
     right:-20px;
+
     top:-70px;
-    font-family:'Bebas Neue';
+
+    font-family:
+    'Bebas Neue';
+
     font-size:18rem;
-    color:rgba(212,175,55,.025);
+
+    color:
+    rgba(212,175,55,.025);
 }
 
 .gold-box p{
+
     max-width:700px;
+
     line-height:2;
+
     color:#999;
+
     margin-top:30px;
 }
 
@@ -782,17 +1446,28 @@ section{
 ========================================================= */
 
 .final{
+
     min-height:75vh;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     text-align:center;
+
     background:#000;
 }
 
 .final h2{
-    font-family:'Bebas Neue';
-    font-size:clamp(4rem,10vw,9rem);
+
+    font-family:
+    'Bebas Neue';
+
+    font-size:
+    clamp(4rem,10vw,9rem);
+
     line-height:.85;
 }
 
@@ -801,9 +1476,14 @@ section{
 }
 
 .final-sub{
-    margin:30px 0;
+
+    margin:
+    30px 0;
+
     color:#777;
+
     letter-spacing:4px;
+
     font-size:.75rem;
 }
 
@@ -812,35 +1492,59 @@ section{
 ========================================================= */
 
 footer{
-    padding:40px 7%;
-    border-top:1px solid #161616;
+
+    padding:
+    40px 7%;
+
+    border-top:
+    1px solid #161616;
+
     display:flex;
-    justify-content:space-between;
+
+    justify-content:
+    space-between;
+
     align-items:center;
+
     color:#555;
+
     font-size:.7rem;
+
     letter-spacing:2px;
 }
 
 .footer-logo{
-    color:var(--gold);
-    font-family:'Bebas Neue';
+
+    color:
+    var(--gold);
+
+    font-family:
+    'Bebas Neue';
+
     font-size:1.8rem;
 }
 
 /* =========================================================
-   REVEAL ANIMATION
+   REVEAL
 ========================================================= */
 
 .reveal{
+
     opacity:0;
-    transform:translateY(50px);
-    transition:1s cubic-bezier(.2,.7,.2,1);
+
+    transform:
+    translateY(50px);
+
+    transition:
+    1s cubic-bezier(.2,.7,.2,1);
 }
 
 .reveal.visible{
+
     opacity:1;
-    transform:translateY(0);
+
+    transform:
+    translateY(0);
 }
 
 /* =========================================================
@@ -848,39 +1552,68 @@ footer{
 ========================================================= */
 
 .embers{
+
     position:fixed;
+
     inset:0;
+
     pointer-events:none;
+
     z-index:20;
+
     overflow:hidden;
 }
 
 .ember{
+
     position:absolute;
+
     bottom:-10px;
+
     width:3px;
+
     height:3px;
-    background:var(--gold);
+
+    background:
+    var(--gold);
+
     border-radius:50%;
+
     opacity:0;
-    animation:emberRise linear infinite;
+
+    animation:
+    emberRise linear infinite;
 }
 
 @keyframes emberRise{
+
     0%{
-        transform:translateY(0);
+        transform:
+        translateY(0);
+
         opacity:0;
     }
-    10%{opacity:.7}
-    80%{opacity:.2}
+
+    10%{
+        opacity:.7;
+    }
+
+    80%{
+        opacity:.2;
+    }
+
     100%{
-        transform:translateY(-100vh) translateX(80px);
+
+        transform:
+        translateY(-100vh)
+        translateX(80px);
+
         opacity:0;
     }
 }
 
 /* =========================================================
-   RESPONSIVE
+   MOBILE
 ========================================================= */
 
 @media(max-width:900px){
@@ -890,14 +1623,29 @@ footer{
     }
 
     .hero-bg{
+
         background:
-          linear-gradient(0deg,#030303 3%,rgba(0,0,0,.15) 70%),
-          linear-gradient(90deg,rgba(0,0,0,.7),transparent),
-          url('assets/killer-rp-photo.jpg.png') center / cover no-repeat;
+
+        linear-gradient(
+            0deg,
+            #030303 3%,
+            rgba(0,0,0,.15) 70%
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.7),
+            transparent
+        ),
+
+        url('assets/killer-rp-photo.jpg.png')
+        center / cover no-repeat;
     }
 
     .hero{
+
         align-items:flex-end;
+
         padding-bottom:100px;
     }
 
@@ -906,7 +1654,9 @@ footer{
     }
 
     .manifesto-grid{
+
         grid-template-columns:1fr;
+
         gap:50px;
     }
 
@@ -914,13 +1664,33 @@ footer{
         grid-template-columns:1fr;
     }
 
+    .video-heading{
+
+        display:block;
+    }
+
+    .video-description{
+
+        margin-top:25px;
+    }
+
+    .youtube-info{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+    }
+
     section{
         padding:90px 7%;
     }
 
     footer{
+
         flex-direction:column;
+
         gap:20px;
+
         text-align:center;
     }
 }
@@ -946,13 +1716,22 @@ footer{
     .gold-box{
         padding:50px 25px;
     }
+
+    .video-topbar{
+        padding:0 15px;
+    }
+
+    .video-label{
+        letter-spacing:1px;
+    }
 }
 
 </style>
+
 </head>
 
-
 <body>
+
 
 <!-- ======================================================
      INTRO
@@ -977,9 +1756,14 @@ footer{
 </div>
 
 
-<!-- PARTICULAS -->
+<!-- ======================================================
+     GOLD PARTICLES
+====================================================== -->
 
-<div class="embers" id="embers"></div>
+<div
+class="embers"
+id="embers">
+</div>
 
 
 <!-- ======================================================
@@ -988,18 +1772,52 @@ footer{
 
 <nav id="navbar">
 
-    <a href="#home" class="logo">
-        KILLER <span>RP</span>
+    <a
+    href="#home"
+    class="logo">
+
+        KILLER
+        <span>RP</span>
+
     </a>
 
     <ul class="nav-links">
 
-        <li><a href="#killer">El Killer</a></li>
-        <li><a href="#valencia">Valencia</a></li>
-        <li><a href="#sound">Mi sonido</a></li>
-        <li><a href="#videos">Vídeos</a></li>
-        <li><a href="#dj">DJ</a></li>
-        <li><a href="#gold">Gold</a></li>
+        <li>
+            <a href="#killer">
+                El Killer
+            </a>
+        </li>
+
+        <li>
+            <a href="#valencia">
+                Valencia
+            </a>
+        </li>
+
+        <li>
+            <a href="#sound">
+                Mi sonido
+            </a>
+        </li>
+
+        <li>
+            <a href="#videos">
+                Vídeos
+            </a>
+        </li>
+
+        <li>
+            <a href="#dj">
+                DJ
+            </a>
+        </li>
+
+        <li>
+            <a href="#gold">
+                Gold
+            </a>
+        </li>
 
     </ul>
 
@@ -1010,7 +1828,9 @@ footer{
      HERO
 ====================================================== -->
 
-<header class="hero" id="home">
+<header
+class="hero"
+id="home">
 
     <div class="hero-bg"></div>
 
@@ -1036,27 +1856,43 @@ footer{
 
         <div class="hero-sub">
 
-            <strong>NACIDO EN VALENCIA.</strong><br>
+            <strong>
+                NACIDO EN VALENCIA.
+            </strong>
 
-            FORJADO EN EL BARRIO.<br>
+            <br>
+
+            FORJADO EN EL BARRIO.
+
+            <br>
 
             FIEL AL FLOW.
 
         </div>
 
+
         <div class="hero-buttons">
 
-            <a href="#killer" class="btn btn-gold">
+            <a
+            href="#killer"
+            class="btn btn-gold">
+
                 ENTRA EN MI MUNDO
+
             </a>
 
-            <a href="#videos" class="btn btn-dark">
-                VER VIDEOS
+            <a
+            href="#videos"
+            class="btn btn-dark">
+
+                VER VIDEO
+
             </a>
 
         </div>
 
     </div>
+
 
     <div class="scroll-down">
         SCROLL
@@ -1066,7 +1902,7 @@ footer{
 
 
 <!-- ======================================================
-     MARQUEE
+     MOVING TEXT
 ====================================================== -->
 
 <div class="marquee">
@@ -1074,21 +1910,36 @@ footer{
     <div class="marquee-inner">
 
         <span>
+
             KILLER RP <b>✦</b>
+
             VALENCIA <b>✦</b>
+
             CANTANTE <b>✦</b>
+
             DJ <b>✦</b>
+
             EL DIABLO DEL GUETO <b>✦</b>
+
             FIEL AL FLOW <b>✦</b>
+
         </span>
 
+
         <span>
+
             KILLER RP <b>✦</b>
+
             VALENCIA <b>✦</b>
+
             CANTANTE <b>✦</b>
+
             DJ <b>✦</b>
+
             EL DIABLO DEL GUETO <b>✦</b>
+
             FIEL AL FLOW <b>✦</b>
+
         </span>
 
     </div>
@@ -1100,58 +1951,95 @@ footer{
      EL KILLER
 ====================================================== -->
 
-<section class="manifesto" id="killer">
+<section
+class="manifesto"
+id="killer">
 
     <div class="manifesto-grid">
+
 
         <div class="reveal">
 
             <div class="section-tag">
+
                 01 / EL KILLER
+
             </div>
+
 
             <div class="big-quote">
 
                 EL BARRIO<br>
+
                 ME CORRE<br>
+
                 POR LAS<br>
-                <span>VENAS.</span>
+
+                <span>
+                    VENAS.
+                </span>
 
             </div>
 
         </div>
 
 
-        <div class="manifesto-text reveal">
+        <div
+        class="manifesto-text reveal">
 
             <div class="section-line"></div>
 
+
             <p>
+
                 No nací para seguir tendencias.
-                <strong>Nací para tener mi propio flow.</strong>
+
+                <strong>
+                    Nací para tener mi propio flow.
+                </strong>
+
             </p>
 
             <br>
 
+
             <p>
+
                 Valencia me vio caer.
+
                 Valencia me vio levantarme.
+
                 Cada golpe dejó una marca,
-                pero ninguna consiguió cambiar quién soy.
+
+                pero ninguna consiguió cambiar
+                quién soy.
+
             </p>
 
             <br>
 
+
             <p>
-                Soy cantante. Soy DJ.
+
+                Soy cantante.
+
+                Soy DJ.
+
                 Soy calle, música y supervivencia.
+
             </p>
 
             <br>
 
+
             <p>
+
                 No necesito parecerme a nadie.
-                <strong>KILLER RP es KILLER RP.</strong>
+
+                <strong>
+                    KILLER RP es KILLER RP.
+                </strong>
+
             </p>
 
         </div>
@@ -1165,38 +2053,71 @@ footer{
      VALENCIA
 ====================================================== -->
 
-<section class="valencia" id="valencia">
+<section
+class="valencia"
+id="valencia">
 
-    <div class="valencia-content reveal">
+    <div
+    class="valencia-content reveal">
+
 
         <div class="section-tag">
+
             02 / ORIGEN
+
         </div>
+
 
         <h2 class="section-title">
 
-            MADE IN<br>
-            <span class="gold">VALENCIA</span>
+            MADE IN
+
+            <br>
+
+            <span class="gold">
+
+                VALENCIA
+
+            </span>
 
         </h2>
 
-        <p>
-            Esta ciudad no es simplemente el lugar donde nací.
-            Está en mi forma de hablar, en mi música,
-            en mi carácter y en mi manera de plantarme
-            delante del mundo.
-        </p>
 
         <p>
-            Las calles cambian. La gente cambia.
-            Las modas pasan.
-            <strong style="color:white">
-                El origen permanece.
-            </strong>
+
+            Esta ciudad no es simplemente
+            el lugar donde nací.
+
+            Está en mi forma de hablar,
+            en mi música,
+            en mi carácter
+            y en mi manera de plantarme
+            delante del mundo.
+
         </p>
+
+
+        <p>
+
+            Las calles cambian.
+
+            La gente cambia.
+
+            Las modas pasan.
+
+            <strong style="color:white">
+
+                El origen permanece.
+
+            </strong>
+
+        </p>
+
 
         <div class="coordinates">
+
             VALENCIA · ESPAÑA
+
         </div>
 
     </div>
@@ -1205,21 +2126,34 @@ footer{
 
 
 <!-- ======================================================
-     SONIDO
+     SOUND
 ====================================================== -->
 
-<section class="sound" id="sound">
+<section
+class="sound"
+id="sound">
+
 
     <div class="reveal">
 
         <div class="section-tag">
+
             03 / EL SONIDO
+
         </div>
+
 
         <h2 class="section-title">
 
-            MI SONIDO.<br>
-            <span class="gold">MIS REGLAS.</span>
+            MI SONIDO.
+
+            <br>
+
+            <span class="gold">
+
+                MIS REGLAS.
+
+            </span>
 
         </h2>
 
@@ -1229,7 +2163,8 @@ footer{
     <div class="sound-grid">
 
 
-        <article class="sound-card reveal">
+        <article
+        class="sound-card reveal">
 
             <div class="sound-number">
                 01
@@ -1244,14 +2179,18 @@ footer{
             </h3>
 
             <p>
+
                 Barras, actitud y verdad.
+
                 Sin pedir permiso.
+
             </p>
 
         </article>
 
 
-        <article class="sound-card reveal">
+        <article
+        class="sound-card reveal">
 
             <div class="sound-number">
                 02
@@ -1266,14 +2205,18 @@ footer{
             </h3>
 
             <p>
+
                 El ritmo no se escucha solamente.
+
                 Se siente.
+
             </p>
 
         </article>
 
 
-        <article class="sound-card reveal">
+        <article
+        class="sound-card reveal">
 
             <div class="sound-number">
                 03
@@ -1288,8 +2231,13 @@ footer{
             </h3>
 
             <p>
+
                 Un estilo propio.
-                Sin copias. Sin disfraces.
+
+                Sin copias.
+
+                Sin disfraces.
+
             </p>
 
         </article>
@@ -1301,50 +2249,153 @@ footer{
 
 
 <!-- ======================================================
-     VIDEOS
+     VIDEO MODE — YOUTUBE
 ====================================================== -->
 
-<section class="video-section" id="videos">
+<section
+class="video-section"
+id="videos">
 
-    <div class="reveal">
 
-        <div class="section-tag">
-            04 / VIDEO MODE
+    <div class="video-heading reveal">
+
+
+        <div>
+
+            <div class="section-tag">
+
+                04 / VIDEO MODE
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                PRESS
+
+                <br>
+
+                <span class="gold">
+
+                    PLAY.
+
+                </span>
+
+            </h2>
+
         </div>
 
-        <h2 class="section-title">
 
-            PRESS<br>
-            <span class="gold">PLAY.</span>
+        <p class="video-description">
 
-        </h2>
+            Dale al play.
+
+            Sube el volumen.
+
+            Esto no es una presentación.
+
+            Esto es
+
+            <strong style="color:white">
+
+                KILLER RP.
+
+            </strong>
+
+        </p>
+
 
     </div>
 
 
     <div class="video-main reveal">
 
-        <div class="video-label">
-            KILLER RP / OFFICIAL VIDEO
+
+        <div class="video-topbar">
+
+
+            <div class="video-label">
+
+                KILLER RP GOLD /
+                OFFICIAL VIDEO
+
+            </div>
+
+
+            <div class="video-status">
+
+                <span class="live-dot"></span>
+
+                VIDEO MODE
+
+            </div>
+
+
         </div>
 
-        <!--
-        CAMBIA ESTE ARCHIVO POR TU VIDEO
-        -->
 
-        <video
-            controls
-            playsinline
-            preload="metadata"
-            poster="assets/killer-rp-photo.jpg.png">
+        <!-- YOUTUBE PLAYER -->
 
-            <source
-                src="assets/killer-rp-video-main.mp4"
-                type="video/mp4">
+        <div class="youtube-player">
 
-            Tu navegador no puede reproducir este vídeo.
 
-        </video>
+            <iframe
+
+                src="https://www.youtube.com/embed/bOgRe1OtqPg?rel=0&modestbranding=1"
+
+                title="KILLER RP GOLD - Fanático gatillero"
+
+                loading="lazy"
+
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+
+                referrerpolicy="strict-origin-when-cross-origin"
+
+                allowfullscreen>
+
+            </iframe>
+
+
+        </div>
+
+
+        <div class="youtube-info">
+
+
+            <div>
+
+                <h3>
+
+                    FANÁTICO GATILLERO
+
+                </h3>
+
+                <p>
+
+                    KILLER RP GOLD · OFFICIAL VIDEO
+
+                </p>
+
+            </div>
+
+
+            <a
+
+            class="youtube-link"
+
+            href="https://youtu.be/bOgRe1OtqPg?is=2LV1pompq3niVKVG"
+
+            target="_blank"
+
+            rel="noopener noreferrer">
+
+                VER EN YOUTUBE ↗
+
+            </a>
+
+
+        </div>
+
 
     </div>
 
@@ -1355,34 +2406,61 @@ footer{
      DJ MODE
 ====================================================== -->
 
-<section class="dj" id="dj">
+<section
+class="dj"
+id="dj">
 
-    <div class="dj-content reveal">
+
+    <div
+    class="dj-content reveal">
+
 
         <div class="section-tag">
+
             05 / DJ MODE
+
         </div>
+
 
         <h2 class="section-title">
 
-            CONTROL<br>
-            THE <span class="gold">NIGHT.</span>
+            CONTROL
+
+            <br>
+
+            THE
+
+            <span class="gold">
+
+                NIGHT.
+
+            </span>
 
         </h2>
+
 
         <p class="dj-copy">
 
             Cuando KILLER RP entra en cabina,
             cambia el lenguaje.
 
+            <br><br>
+
             El bajo habla.
+
             La noche responde.
 
+            <br><br>
+
             Del rap al sonido urbano,
-            cada sesión lleva la misma firma:
+            cada sesión lleva
+            la misma firma:
 
             <strong style="color:white">
-                hacer las cosas a mi manera.
+
+                hacer las cosas
+                a mi manera.
+
             </strong>
 
         </p>
@@ -1391,15 +2469,23 @@ footer{
         <div class="equalizer">
 
             <div class="bar"></div>
+
             <div class="bar"></div>
+
             <div class="bar"></div>
+
             <div class="bar"></div>
+
             <div class="bar"></div>
+
             <div class="bar"></div>
+
             <div class="bar"></div>
+
             <div class="bar"></div>
 
         </div>
+
 
     </div>
 
@@ -1407,34 +2493,55 @@ footer{
 
 
 <!-- ======================================================
-     DIABLO
+     EL DIABLO DEL GUETO
 ====================================================== -->
 
 <section class="diablo">
 
-    <div class="diablo-content reveal">
+
+    <div
+    class="diablo-content reveal">
+
 
         <div class="diablo-small">
+
             ALTER EGO
+
         </div>
+
 
         <h2>
 
-            EL DIABLO<br>
-            <span>DEL GUETO</span>
+            EL DIABLO
+
+            <br>
+
+            <span>
+
+                DEL GUETO
+
+            </span>
 
         </h2>
 
+
         <p>
 
-            No es un personaje que aparece cuando se enciende
-            una cámara.
+            No es un personaje
+            que aparece cuando
+            se enciende una cámara.
 
-            Es la parte que sobrevivió,
-            la que nunca se rindió
-            y la que convirtió cada golpe en combustible.
+            <br><br>
+
+            Es la parte que sobrevivió.
+
+            La que nunca se rindió.
+
+            La que convirtió cada golpe
+            en combustible.
 
         </p>
+
 
     </div>
 
@@ -1442,36 +2549,64 @@ footer{
 
 
 <!-- ======================================================
-     GOLD
+     KILLER GOLD
 ====================================================== -->
 
-<section class="gold-section" id="gold">
+<section
+class="gold-section"
+id="gold">
 
-    <div class="gold-box reveal">
+
+    <div
+    class="gold-box reveal">
+
 
         <div class="section-tag">
+
             06 / THE NEXT LEVEL
+
         </div>
+
 
         <h2 class="section-title">
 
-            KILLER RP<br>
-            <span class="gold">GOLD.</span>
+            KILLER RP
+
+            <br>
+
+            <span class="gold">
+
+                GOLD.
+
+            </span>
 
         </h2>
 
+
         <p>
 
-            GOLD no significa olvidar de dónde vienes.
+            GOLD no significa
+            olvidar de dónde vienes.
+
+            <br><br>
 
             Significa llegar más lejos
-            sin vender aquello que te hizo diferente.
+            sin vender aquello
+            que te hizo diferente.
+
+            <br><br>
 
             El barrio puso las cicatrices.
+
             La música puso la voz.
-            El resto todavía está por escribir.
+
+            <br><br>
+
+            El resto todavía
+            está por escribir.
 
         </p>
+
 
     </div>
 
@@ -1484,18 +2619,28 @@ footer{
 
 <section class="final">
 
+
     <div class="reveal">
+
 
         <h2>
 
-            NO SIGO<br>
-            EL JUEGO.<br>
+            NO SIGO
+
+            <br>
+
+            EL JUEGO.
+
+            <br>
 
             <span>
+
                 CREO EL MÍO.
+
             </span>
 
         </h2>
+
 
         <div class="final-sub">
 
@@ -1503,11 +2648,15 @@ footer{
 
         </div>
 
-        <a href="#home" class="btn btn-gold">
+
+        <a
+        href="#home"
+        class="btn btn-gold">
 
             BACK TO THE TOP
 
         </a>
+
 
     </div>
 
@@ -1520,17 +2669,27 @@ footer{
 
 <footer>
 
+
     <div class="footer-logo">
+
         KILLER RP
+
     </div>
 
+
     <div>
+
         © 2026 KILLER RP
+
     </div>
 
+
     <div>
+
         VALENCIA · SPAIN
+
     </div>
+
 
 </footer>
 
@@ -1541,55 +2700,97 @@ footer{
 
 <script>
 
-/* NAVBAR */
+/* =========================================================
+   NAVBAR
+========================================================= */
 
-const navbar = document.getElementById("navbar");
+const navbar =
+document.getElementById("navbar");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener(
+"scroll",
+()=>{
 
     if(window.scrollY > 80){
-        navbar.classList.add("scrolled");
+
+        navbar.classList.add(
+        "scrolled"
+        );
+
     }else{
-        navbar.classList.remove("scrolled");
+
+        navbar.classList.remove(
+        "scrolled"
+        );
+
     }
 
 });
 
 
-/* SCROLL REVEAL */
+/* =========================================================
+   REVEAL ON SCROLL
+========================================================= */
 
-const reveals = document.querySelectorAll(".reveal");
+const reveals =
+document.querySelectorAll(
+".reveal"
+);
 
-const observer = new IntersectionObserver((entries)=>{
+const observer =
+new IntersectionObserver(
 
-    entries.forEach(entry=>{
+(entries)=>{
+
+    entries.forEach(
+    entry=>{
 
         if(entry.isIntersecting){
 
-            entry.target.classList.add("visible");
+            entry.target
+            .classList
+            .add("visible");
 
         }
 
     });
 
-},{
+},
+
+{
     threshold:.15
-});
+}
 
-reveals.forEach(el=>observer.observe(el));
+);
+
+reveals.forEach(
+el=>observer.observe(el)
+);
 
 
-/* EMBERS / GOLD PARTICLES */
+/* =========================================================
+   GOLD / FIRE PARTICLES
+========================================================= */
 
 const emberContainer =
-document.getElementById("embers");
+document.getElementById(
+"embers"
+);
 
-for(let i=0;i<22;i++){
+for(
+    let i=0;
+    i<22;
+    i++
+){
 
     const ember =
-    document.createElement("span");
+    document.createElement(
+    "span"
+    );
 
-    ember.classList.add("ember");
+    ember.classList.add(
+    "ember"
+    );
 
     ember.style.left =
     Math.random()*100+"%";
@@ -1603,22 +2804,36 @@ for(let i=0;i<22;i++){
     const size =
     1+Math.random()*3;
 
-    ember.style.width=size+"px";
-    ember.style.height=size+"px";
+    ember.style.width =
+    size+"px";
 
-    emberContainer.appendChild(ember);
+    ember.style.height =
+    size+"px";
+
+    emberContainer.appendChild(
+    ember
+    );
 
 }
 
 
-/* SUBTLE HERO PARALLAX */
+/* =========================================================
+   HERO PARALLAX
+========================================================= */
 
-window.addEventListener("scroll",()=>{
+window.addEventListener(
+"scroll",
+()=>{
 
     const hero =
-    document.querySelector(".hero-bg");
+    document.querySelector(
+    ".hero-bg"
+    );
 
-    if(window.scrollY < window.innerHeight){
+    if(
+        window.scrollY <
+        window.innerHeight
+    ){
 
         hero.style.transform =
         `translateY(${window.scrollY*.12}px) scale(1.03)`;
@@ -1628,6 +2843,7 @@ window.addEventListener("scroll",()=>{
 });
 
 </script>
+
 
 </body>
 </html>
